@@ -1,0 +1,31 @@
+<div class="col-md-10 col-md-offset-1 content">
+   <div class="artistContent">
+       <h3 class="">Shop</h3>
+       <form class="">
+           <input type="text" id="search" placeholder="Search for an album">
+           <button type="submit">Search</button>
+       </form>
+       <div class=" dispArtist">
+           <label for="#genre">Choose a Genre</label>
+           <select  ng-model="vm.genre" ng-change="vm.changeGenre()">
+                <option value="Pop">Pop</option>
+                <option value="Rock">Rock</option>
+                <option value="Rap">Rap</option>
+                <option value="Metal">Metal</option>
+                <option value="Regge">Regge</option>
+                <option value="House">House</option>
+                <option value="Dubstep">Dubstep</option>
+           </select>
+            <div id="simArtists" class="">
+                <div class="album" ng-repeat="album in vm.albumsByGenre.data.albums.album">
+                    <div class="simArtistImg ">
+                        <div class="simArtistImg" ng-click="vm.setAlbum(album.mbid)" ui-sref="singleAlbum">
+                            <img src="{{album.image[3]['#text']}}">
+                            <h4>{{album.name}} By {{album.artist.name}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+</div>

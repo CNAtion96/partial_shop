@@ -1,0 +1,16 @@
+<div class="col-md-10 col-md-offset-1 content">
+   <div class="artistContent">
+       <h3 class="">Shop</h3>
+       <form class="">
+           <input type="text" id="search" placeholder="Search for an album">
+           <button type="submit">Search</button>
+       </form>
+       <div class="topAlbum" ng-repeat="album in vm.topAlbum.data.topalbums.album">
+           <h4>Top Album</h5>
+           <div class="tAImg">
+               <img src="{{album.image[3]['#text']}}">
+           </div>
+           <h5>{{album.name}} by {{album.artist.name}}</h5>
+      </div>  
+   </div>
+</div>

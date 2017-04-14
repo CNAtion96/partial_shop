@@ -1,0 +1,149 @@
+body {
+    background-color: #008C8C;
+    background-size: cover;
+    header {
+        height: 85px;
+        margin-bottom: 20px;
+        h1 {
+            text-align: center;
+        }
+    }
+    ul {
+        margin-top: 100px;
+        text-align: center;
+        li {
+            list-style: none;
+            display: inline-block;
+            margin: 0px;
+            font-size: 1.5em;
+            a {
+                color: black;
+                cursor: pointer;
+                margin: 0px;
+            }
+        }
+    }
+    section {
+        .content{
+            
+            padding: 25px;
+            border-radius: 5px;
+            form {
+                text-align: center;
+                margin-bottom: 25px;
+                input[type=text] {
+                    background-color: #BD0000;
+                    border: none;
+                    height: 30px;
+                    border-radius: 5px;
+                    padding: 5px;
+                    width: 75%;
+                    box-shadow: -8px 5px 5px rgba(145, 0, 0, .7);
+                    color: white;
+                    &:focus {
+                        background-color: #EA0000;
+                        outline: none;
+                    }
+                    &::placeholder {
+                        color: white;
+                    }
+                }
+            }
+            input[type=submit] {
+                border-radius: 5px;
+                box-shadow: -8px 5px 5px rgba(145, 0, 0, .7);
+                background-color: #BD0000;
+                outline: none;
+                color: white;
+            }
+            .artistContent {
+                background-color: #007272;
+                box-shadow: -10px 10px 5px rgba(0, 39, 39,.5);
+                border-radius: 5px;
+                padding: 15px;
+                h3 {
+                    text-align: center;
+                }
+                .dispArtist  {
+                    text-align: center;
+                    select {
+                        margin-bottom: 50px;
+                    }
+                    .albumContainer {
+                        text-align: center;
+                        .trackList {
+                            background-color: darkslategray;
+                            border-radius: 5px;
+                            box-shadow: -8px 8px 5px rgba(0, 39, 39,.5);
+                            color: whitesmoke;
+                            width: 470px;
+                            margin: 0px;
+                            margin-left: 26%;
+                        }
+                    }
+                    #simArtists {
+                        margin-bottom: 45px;
+                        .simArtistImg {
+                            height: 100px;
+                            display: block;
+                            margin-bottom: 90px;
+                            margin-top: 0px;
+                            vertical-align: top;
+                            text-align: center;
+                            &:hover {
+                                img {
+                                    box-shadow: -10px 10px 7px rgba(0, 39, 39,.5) !important;
+                                }
+                                h4 {
+                                    color: #00BB00
+                                }
+                            }
+                            img {
+                                max-height: 100%;
+                                border-radius: 5px;
+                                box-shadow: -8px 8px 5px rgba(0, 39, 39,.5);
+                                cursor: pointer;
+                                margin-bottom: 15px;
+                                &:hover {
+                                    box-shadow: -10px 10px 7px rgba(0, 39, 39,.5);
+                                    border-radius: 7px;
+                                }
+                            }
+                            h4 {
+                                cursor: pointer;
+                                &:hover {
+                                    color: #00BB00;
+                                }
+                            }
+                        }
+                    }
+                }
+                .topAlbum {
+                    text-align: center;
+                    .tAImg {
+                        height: 200px;
+                        img {
+                            max-height: 100%;
+                            box-shadow: -10px 10px 5px rgba(0, 39, 39,.5);
+                        }
+                    }
+                }
+                .album {
+                    display: inline-block;
+                    width: 33%;
+                }
+            }
+        }
+    } 
+    footer {
+        p {
+            text-align: center;
+            #lastFM {
+                color: #8a000b;
+            }
+        }
+        .weather {
+            text-align: center;
+        }
+    } 
+}

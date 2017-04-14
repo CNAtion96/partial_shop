@@ -1,0 +1,56 @@
+<div class="col-md-10 col-md-offset-1 content">
+   <div class="artistContent">
+       <h3 class="">Shop</h3>
+       <form class="">
+           <input type="text" id="search" placeholder="Search for an album">
+           <button type="submit">Search</button>
+       </form>
+       <div class="topAlbum" ng-repeat="album in vm.topAlbum.data.topalbums.album">
+           <h4>Top Album</h5>
+           <div class="tAImg">
+               <img src="{{album.image[3]['#text']}}">
+           </div>
+           <h5>{{album.name}} by {{album.artist.name}}</h5>
+           <ul class="nav nav-tabs ">
+            <li class="nav-item">
+                <a class="nav-link linkThree active" ng-click="vm.changeTab3()" data-toggle="tab" href="#topAlbums">Top Albums</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link linkFour" ng-click="vm.changeTab4()" data-toggle="tab" href="#albumShop">Shop</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="topAlbums" class="tab-pane fade in active">
+                <div class="topAlbum" ng-repeat="artist in vm.topAlbums.data.topalbums.album">
+                    <div class="topImg">
+                        <img src="{{album.image[3]['#text']}}">
+                    </div>
+                    <h5>{{album.name}} by {{album.artist.name}}</h5>
+                </div>
+            </div>
+            <div id="albumShop" class="tab-pane fade in active">
+                 <div class=" dispArtist">
+                    <label for="#genre">Choose a Genre</label>
+                    <select  ng-model="vm.genre" ng-change="vm.changeGenre()">
+                        <option selected="selected" value="Pop">Pop</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Rap">Rap</option>
+                        <option value="Metal">Metal</option>
+                        <option value="Regge">Regge</option>
+                        <option value="House">House</option>
+                        <option value="Dubstep">Dubstep</option>
+                    </select>
+                    <div id="simArtists" class="">
+                    <div class="album" ng-repeat="album in vm.albumsByGenre.data.albums.album">
+                        <div class="simArtistImg ">
+                            <img ng-click="" src="{{album.image[3]['#text']}}">
+                            <h4 ng-click="">{{album.name}} By {{album.artist.name}}</h4>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+       </div>
+   </div>
+</div>

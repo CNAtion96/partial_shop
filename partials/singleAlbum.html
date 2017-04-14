@@ -1,0 +1,25 @@
+<div class="col-md-10 col-md-offset-1 content">
+   <div class="artistContent">
+       <h3 class="">Shop</h3>
+       <form>
+           <input type="text" id="search" placeholder="Search for an album">
+           <button type="submit">Search</button>
+       </form>
+       <div class="dispArtist">
+           <div class="albumContainer">
+                <div class="albumImg">
+                    <img src="{{vm.singleAlbum.data.album.image[3]['#text']}}">
+                </div>
+                <h4>{{vm.singleAlbum.data.album.name}} By {{vm.singleAlbum.data.album.artist}}</h4>
+                <hr>
+                <h3>Track List</h3>
+                <div class="trackList">
+                    <div class="track" ng-repeat="track in vm.singleAlbum.data.album.tracks.track">
+                        <p>{{track.name}}</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

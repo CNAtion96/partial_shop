@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app='artistSearch'>
+  <head>
+  	<title>Artist Search</title>
+  	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Revalia" rel="stylesheet">
+  	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/foldup.css">
+  </head>
+  <body class="container-fluid">
+	<div class="row">
+		<header class="col-md-12">
+			<h1 class="col-md-6 col-md-offset-3 foldup">Album Shop</h1>
+		</header>
+	</div>
+		<ul class="col-md-12 navbar">
+				<li ><a ui-sref='home' >Home |</a></li>
+				<li ><a ui-sref='albumShop' >Shop</a></li>
+		</ul>
+		<section class="col-md-12" ui-view></section>
+	
+
+	<footer>
+		<p class="col-md-12">Powered by <span id="lastFM">Last.fm</span></p>
+		<div class="col-md-6 col-md-offset-3 weather">
+			<weather city="cincinnati"></weather>
+		</div>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-sanitize.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-resource.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="Lettering.js-master/jquery.lettering.js"></script>
+	<script src="js/foldup.js"></script>
+	<script src='js/main.js'></script>
+	<script src="js/controllers/shopController.js"></script>
+	<script src="js/controllers/singleAlbumController.js"></script>
+	<script src="js/weather.js"></script>
+	<script src="js/services/data.js"></script>
+  </body>
+</html>
